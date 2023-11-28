@@ -5,14 +5,17 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Test Page</title>
 		<link rel="stylesheet" type="text/css" href="css/test-style.css" />
+		<script src="js/test-script.js" defer></script>
 	</head>
 	<body>
 		<header>
 			<h1>Test Page</h1>
 		</header>
 		<section id="main-content">
-			<p>Welcome to the Test Page! This is a sample content paragraph.</p>
-			<button class="styled-button">Click me</button>
+			<p id="content-paragraph">
+				Welcome to the Test Page! This is a sample content paragraph.
+			</p>
+			<button class="styled-button" onclick="changeContent()">Click me</button>
 		</section>
 		<footer>
 			<p>&copy; 2023 Test Page. All rights reserved.</p>

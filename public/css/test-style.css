@@ -34,6 +34,11 @@ button.styled-button:hover {
 	background-color: #3367d6;
 }
 
+#content-paragraph {
+	font-size: 18px;
+	line-height: 1.6;
+}
+
 footer {
 	text-align: center;
 	padding: 10px;
