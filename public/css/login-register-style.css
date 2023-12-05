@@ -69,7 +69,7 @@ header {
     align-items: center;
     overflow: hidden;
     transition: transform .5s ease, height .2s ease;
-    transform: scale(0);
+    /* transform: scale(0); */
 }
 
 .wrapper.active {
@@ -105,21 +105,6 @@ header {
 .wrapper.active .form-box.register {
     transition: transform .18s ease;
     transform: translateX(0);
-}
-
-.wrapper .icon-close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 45px;
-    height: 45px;
-    font-size: 2em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #162938;
-    cursor: pointer;
-    z-index: 1;
 }
 
 */ .form-box h2 {
@@ -203,11 +188,4 @@ header {
 
 .login-register p a:hover {
     text-decoration: underline;
-}
-
-.error-message {
-    color: #FF0000;
-    font-size: 14px;
-    margin-top: 10px;
-    display: none;
 }
