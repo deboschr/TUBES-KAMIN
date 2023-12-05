@@ -15,4 +15,4 @@ const sequelize = new Sequelize("tubes_kamin", "root", "", {
 	}
 })();
 
-export default sequelize;
+export { sequelize };
