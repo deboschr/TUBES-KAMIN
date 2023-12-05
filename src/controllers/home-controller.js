@@ -1,5 +1,5 @@
 export const home_page = (req, res) => {
-	res.render("layouts/navbar");
+	res.render("home-page");
 };
 
 export const redirect_page = (req, res) => {
