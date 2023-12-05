@@ -3,5 +3,6 @@ export const document_management_page = (req, res) => {
 		title: "Document Management",
 		layout: "layouts/main",
 		style: "document-management-style.css",
+		script: "document-management-script.js",
 	});
 };

@@ -1,74 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" type="text/css" href="css/home-style.css" />
-		<script src="js/home-script.js" defer></script>
-		<title>Digital Signature</title>
-	</head>
-	
-<body>
-    <nav> 
-        <div class = "wrapper"> 
-            <div class="logo"><a href=''> Digital Signature </a></div>
-            <div class="menu">
-                <ul>
-                  <li> <a href="home-page.ejs"> Home </a> </li>
-                  <li> <a href="#about"> About </a> </li>
-                  <li> <a href="document-sign-page.ejs"> Upload File </a> </li>
-                  <li> <a href="login-page.ejs"> Login </a> </li>
-                </ul>        
-            </div>
-        </div>
-    </nav>
+<div class="wrapper">
+	<!-- untuk home -->
+	<section id="home">
+		<img src="public/img/HandWrite.png" />
+		<div class="kolom">
+			<p class="deskripsi"></p>
+			<h2>Make Your Signature</h2>
+			<p>Buat digital signature untuk setiap dokumen anda</p>
+			<!-- masukan link upload dokumen disini-->
+			<p>
+				<a href="document-sign-page.ejs" class="tbl-pink">Upload Dokumen </a>
+			</p>
+		</div>
+	</section>
 
-    <div class="wrapper">
-        <!-- untuk home -->
-        <section id="home">
-            <img src="public/img/HandWrite.png"/>
-            <div class="kolom">
-                <p class="deskripsi" > </p>
-                <h2> Make Your Signature </h2>
-                <p> Buat digital signature untuk setiap dokumen anda </p>
-               <!-- masukan link upload dokumen disini--> 
-                <p><a href="document-sign-page.ejs" class="tbl-pink">Upload Dokumen </a></p>
-            </div>
-        </section>
+	<!-- untuk courses -->
+	<section id="history">
+		<div class="kolom">
+			<p class="deskripsi"></p>
+			<h2>Document Management</h2>
+			<p>Lihat dokumen yang telah anda uploadn</p>
+			<!-- masukan link history disini-->
+			<p>
+				<a href="document-management-page.ejs" class="tbl-biru"
+					>Lihat Dokumen</a
+				>
+			</p>
+		</div>
+		<img src="public/img/ReadBook.png" />
+	</section>
 
-        <!-- untuk courses -->
-        <section id="history">
-            <div class="kolom">
-                <p class="deskripsi"></p>
-                <h2>Document Management</h2>
-                <p>Lihat dokumen yang telah anda uploadn</p>
-                 <!-- masukan link history disini--> 
-                <p><a href="document-management-page.ejs" class="tbl-biru">Lihat Dokumen</a></p>
-            </div>
-            <img src="public/img/ReadBook.png"/>
-        </section>
+	<section id="About Us ">
+		<img src="public/img/IdeaLamp.png" />
+		<div class="kolom">
+			<p class="deskripsi"></p>
+			<h2></h2>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<!-- masukan link about disini-->
+			<p><a href=" " class="tbl-pink">About Us</a></p>
+		</div>
+	</section>
 
-        <section id="About Us ">
-            <img src="public/img/IdeaLamp.png"/>
-            <div class="kolom">
-                
-                <p class="deskripsi">   </p>
-                <h2> </h2>
-                <p>  </p>
-                <p>  </p>
-                <p>  </p>
-                <p>  </p>
-                 <!-- masukan link about disini--> 
-                <p><a href=" " class="tbl-pink">About Us</a></p>
-                
-            </div>
-        </section>
-
-    <div id="copyright">
-        <div class="wrapper">
-            &copy; 2023. <b>Digital Signature.</b> All Rights Reserved.
-        </div>
-    </div>
-    
-</body>
-</html>
+	<div id="copyright">
+		<div class="wrapper">
+			&copy; 2023. <b>Digital Signature.</b> All Rights Reserved.
+		</div>
+	</div>
+</div>
+<script src="js/home-script.js" defer></script>

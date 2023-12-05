@@ -5,7 +5,7 @@ export const login_page = (req, res) => {
 	res.render("login-register-page", {
 		title: "Login and Register",
 		layout: "layouts/main",
-		style: "login-register-style.css",
+		style: "login-register-script.js",
 	});
 };
 
