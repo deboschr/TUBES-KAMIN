@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" type="text/css" href="css/login-style.css" />
+	<link rel="stylesheet" type="text/css" href="css/login-register-style.css" />
 	<title>Login Digital Signature</title>
 
 </head>
@@ -13,6 +13,9 @@
 	<header>
 		<h2 class="digitalsignature">Digital Signature</h2>
 		<button class="login-popup">Login</button>
+		<% if (typeof error !=="undefined" ) { %>
+			<p class="error-message">Email atau Password salah!</p>
+			<% } %>
 	</header>
 
 	<div class="wrapper">
@@ -22,15 +25,15 @@
 
 		<div class="form-box login">
 			<h2>Login</h2>
-			<form action="#">
+			<form action="/login" method="post">
 				<div class="input-box">
 					<span class="icon"><ion-icon name="mail"></ion-icon></span>
-					<input type="email" required>
+					<input type="email" name="email" required>
 					<label>Email</label>
 				</div>
 				<div class="input-box">
 					<span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-					<input type="password" required>
+					<input type="password" name="password" required>
 					<label>Password</label>
 				</div>
 				<button type="submit" class="btn">Login</button>
@@ -42,21 +45,26 @@
 
 		<div class="form-box register">
 			<h2>Registration</h2>
-			<form action="#">
+			<form action="/register" method="POST">
 				<div class="input-box">
 					<span class="icon"><ion-icon name="person"></ion-icon></span>
-					<input type="text" required>
-					<label>Username</label>
+					<input type="text" name="nama" required>
+					<label>Nama Lengkap</label>
 				</div>
 				<div class="input-box">
 					<span class="icon"><ion-icon name="mail"></ion-icon></span>
-					<input type="email" required>
+					<input type="email" name="email" required>
 					<label>Email</label>
 				</div>
 				<div class="input-box">
 					<span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-					<input type="password" required>
+					<input type="password" name="password" required>
 					<label>Password</label>
+				</div>
+				<div class="input-box">
+					<span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+					<input type="password" name="repassword" required>
+					<label>Repeat your Password</label>
 				</div>
 				<button type="submit" class="btn">Register</button>
 				<div class="login-register">
@@ -66,7 +74,7 @@
 		</div>
 	</div>
 
-	<script src="js/login-script.js"></script>
+	<script src="js/login-register-script.js"></script>
 	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
