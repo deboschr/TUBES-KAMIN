@@ -3,6 +3,7 @@ export const home_page = (req, res) => {
 		title: "Digital Signature",
 		layout: "layouts/main",
 		style: "home-style.css",
+		script: "home-script.js",
 	});
 };
 

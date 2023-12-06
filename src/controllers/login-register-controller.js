@@ -6,6 +6,7 @@ export const login_page = (req, res) => {
 		title: "Login and Register",
 		layout: "layouts/main",
 		style: "login-register-style.css",
+		script: "login-register-script.js",
 	});
 };
 

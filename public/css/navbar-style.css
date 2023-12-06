@@ -1,37 +1,47 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: rgb(42, 129, 172);
+	background-size: cover;
+	background-position: center;
 }
 
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 15px 0;
-    background: rgb(173 150 204);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px 0;
+	background: transparent;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .navbar-nav {
-    list-style-type: none;
-    display: flex;
+	list-style-type: none;
+	display: flex;
 }
 
 .nav-item a {
-    font-size: 1.1em;
-    color: black;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 200px;
+	font-size: 1.1em;
+	color: black;
+	text-decoration: none;
+	font-weight: 500;
+	margin-left: 200px;
 }
 
 .nav-link:hover {
-    text-decoration: underline;
+	text-decoration: underline;
 }
