@@ -1,15 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: lightskyblue;
-    background-size: cover;
-    background-position: center;
-}
-
 .digitalsignature {
     font-size: 2em;
     user-select: none;
