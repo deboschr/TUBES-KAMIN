@@ -3,30 +3,6 @@
 	--card-radius: 30px;
 }
 
-*,
-html {
-	margin: 0;
-	padding: 0;
-	text-decoration: none;
-	font-family: "Outfit", sans-serif;
-}
-
-body {
-	display: flex;
-	width: 98vw;
-	height: 100vh;
-	background-color: var(--color-bg);
-	justify-content: center;
-}
-
-.body {
-	margin-top: 20px;
-	justify-content: center;
-	width: 100%;
-	height: auto;
-	align-items: center;
-}
-
 main {
 	padding: 30px;
 	width: 80vw;
