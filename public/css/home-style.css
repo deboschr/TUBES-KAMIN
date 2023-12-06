@@ -19,12 +19,10 @@ section {
 .kolom .deskripsi {
     font-size: 30px;
     font-weight: bold;
-    font-family: 'comic sans ms';
     color: #364f6b;
 }
 
 h2 {
-    font-family: 'comic sans ms';
     font-weight: 800;
     font-size: 45px;
     margin-bottom: 20px;
@@ -74,7 +72,6 @@ p {
 }
 
 h3 {
-    font-family: 'comic sans ms';
     font-weight: 800;
     font-size: 30px;
     margin-bottom: 20px;
@@ -83,22 +80,13 @@ h3 {
     line-height: 50px;
 }
 
-<<<<<<< HEAD
-#copyright {
-    text-align: center;
-    width: 100%;
-    padding: 50px 0px 50px 0px;
-    margin-top: 50px;
-}
 
-=======
->>>>>>> 74f96a8f96df8d5941057dcb7bb1ed868c23f1d0
+
 @media screen and (max-width: 991.98px) {
     .wrapper {
         width: 50%;
     }
 
-<<<<<<< HEAD
     section {
         display: block;
     }
@@ -111,15 +99,4 @@ h3 {
 
 
   
-=======
-	section {
-		display: block;
-	}
-
-	section img {
-		display: block;
-		width: 100%;
-		height: auto;
-	}
->>>>>>> 74f96a8f96df8d5941057dcb7bb1ed868c23f1d0
 }
