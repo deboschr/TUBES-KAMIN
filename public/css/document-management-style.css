@@ -25,6 +25,7 @@ main h1 {
 .dangger {
 	background-color: rgb(173, 150, 204);
 }
+
 .card-table {
 	font-size: 13px !important;
 	padding: 20px;
@@ -51,13 +52,16 @@ table th {
 	opacity: 0.7;
 	color: #f7efe7;
 }
+
 .atribut th:last-child {
 	border-top-right-radius: 10px;
 }
+
 .atribut th:nth-child(2) {
 	border-top-left-radius: 10px;
 	width: 10%;
 }
+
 table td {
 	padding: 12px;
 	border-bottom: 1px solid rgba(122, 119, 119, 0.1);
@@ -71,12 +75,15 @@ table td {
 	border: none;
 	border-radius: 12px;
 }
+
 .statusDoc1 {
 	color: green;
 }
+
 .statusDoc2 {
 	color: red;
 }
+
 .button-hapus,
 .button-download {
 	border-radius: 10px;
@@ -84,9 +91,11 @@ table td {
 	width: 70%;
 	border-radius: 3em;
 }
+
 .button-hapus {
 	background-color: lightcoral;
 }
+
 .button-large {
 	margin-top: 10px;
 	color: white;
