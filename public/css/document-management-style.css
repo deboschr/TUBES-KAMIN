@@ -25,6 +25,7 @@ main {
 	overflow-y: scroll;
 	align-items: center;
 	animation: transitionIn 0.75s;
+	margin-top: 120px;
 }
 
 main h1 {

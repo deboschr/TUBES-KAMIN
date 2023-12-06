@@ -26,12 +26,13 @@ body {
     background: rgb(173 154 207);
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .navbar-nav {
     list-style-type: none;
     display: flex;
+    align-items: center;
 }
 
 .nav-item a {
@@ -40,9 +41,31 @@ body {
     text-decoration: none;
     font-weight: 500;
     font-weight: bold;
-    margin-left: 50px;
+    margin-left: 40px;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-link:hover {
     text-decoration: underline;
+}
+
+.login-popup {
+    width: 110px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: black;
+    font-weight: 500;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.login-popup:hover {
+    background: #fff;
+    color: black;
 }
