@@ -17,12 +17,12 @@ body {
     background-position: center;
 }
 
-.navbar {
+.container {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 0;
+    padding: 20px 25px;
     background: rgb(173 154 207);
     display: flex;
     justify-content: space-between;
@@ -35,11 +35,11 @@ body {
 }
 
 .nav-item a {
-    font-size: 1.1em;
+    font-size: 1em;
     color: black;
     text-decoration: none;
     font-weight: 500;
-    margin-left: 200px;
+    margin-left: 70px;
 }
 
 .nav-link:hover {
