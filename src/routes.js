@@ -15,7 +15,7 @@ router.get("/", redirect_page);
 router.get("/login-register", login_page);
 router.get("/digital-signature", home_page);
 router.get("/document-management", document_management_page);
-router.get("/document-sign", document_sign_page);
+router.get("/document-signing", document_sign_page);
 
 router.post("/register", register_user);
 router.post("/login", login_user);
