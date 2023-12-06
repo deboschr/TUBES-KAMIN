@@ -80,3 +80,30 @@ h3 {
     line-height: 50px;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+@media screen and (max-width: 991.98px) {
+    .wrapper {
+        width: 50%;
+    }
+
+    section {
+        display: block;
+    }
+
+    section img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+
+  
+}
+=======
+
+>>>>>>> 4c560584f74702b4408d55aef2b7315596b9a44d
+>>>>>>> origin/6182001062
