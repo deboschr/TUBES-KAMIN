@@ -28,6 +28,10 @@ main {
 	margin-top: 120px;
 }
 
+
+main > *{
+	padding: 10pt;
+  }
 main h1 {
 	font-size: 22px;
 }
@@ -53,6 +57,7 @@ table {
 	font-size: 13px;
 	width: 100%;
 	border-collapse: separate;
+	table-layout: fixed;
 }
 
 table th {
@@ -97,10 +102,10 @@ table td {
 	padding: 4px;
 	width: 70%;
 	border-radius: 3em;
+	size :100%;
+	
 }
-.button-hapus {
-	background-color: lightcoral;
-}
+
 .button-large {
 	margin-top: 10px;
 	color: white;
