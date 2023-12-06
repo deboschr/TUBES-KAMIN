@@ -1,109 +1,80 @@
-
 .wrapper {
-    width: 1100px;
-    margin: auto;
-    position: relative;
+	width: 1100px;
+	margin: auto;
+	position: relative;
 }
 
 section {
-    margin: auto;
-    display: flex;
-    margin-bottom: 50px;
+	margin: auto;
+	display: flex;
+	margin-bottom: 50px;
 }
 
 .kolom {
-    margin-top: 50px;
-    margin-bottom: 50px;
+	margin-top: 50px;
+	margin-bottom: 50px;
 }
 
 .kolom .deskripsi {
-    font-size: 30px;
-    font-weight: bold;
-    color: #364f6b;
+	font-size: 30px;
+	font-weight: bold;
+	color: #364f6b;
 }
 
 h2 {
-    font-weight: 800;
-    font-size: 45px;
-    margin-bottom: 20px;
-    color: #000000;
-    width: 100%;
-    line-height: 50px;
+	font-weight: 800;
+	font-size: 45px;
+	margin-bottom: 20px;
+	color: #000000;
+	width: 100%;
+	line-height: 50px;
 }
 
 a.tbl-biru {
-    background: #D2E0FB;
-    border-radius: 20px;
-    margin-top: 20px;
-    padding: 15px 20px 15px 20px;
-    color: #FFFFFF;
-    cursor: pointer;
-    font-weight: bold;
+	background: #d2e0fb;
+	border-radius: 20px;
+	margin-top: 20px;
+	padding: 15px 20px 15px 20px;
+	color: #ffffff;
+	cursor: pointer;
+	font-weight: bold;
 }
 
 a.tbl-biru:hover {
-    background: #FFC5C5;
-    text-decoration: none;
+	background: #ffc5c5;
+	text-decoration: none;
 }
 
 a.tbl-pink {
-    background: #FFC5C5;
-    border-radius: 20px;
-    margin-top: 20px;
-    padding: 15px 20px 15px 20px;
-    color: #FFFFFF;
-    cursor: pointer;
-    font-weight: bold;
+	background: #ffc5c5;
+	border-radius: 20px;
+	margin-top: 20px;
+	padding: 15px 20px 15px 20px;
+	color: #ffffff;
+	cursor: pointer;
+	font-weight: bold;
 }
 
 a.tbl-pink:hover {
-    background: #D2E0FB;
-    text-decoration: none;
+	background: #d2e0fb;
+	text-decoration: none;
 }
 
 p {
-    margin: 10px 0px 10px 0px;
-    padding: 10px 0px 10px 0px;
+	margin: 10px 0px 10px 0px;
+	padding: 10px 0px 10px 0px;
 }
 
 .tengah {
-    text-align: center;
-    width: 100%;
+	text-align: center;
+	width: 100%;
 }
 
 h3 {
-    font-weight: 800;
-    font-size: 30px;
-    margin-bottom: 20px;
-    color: #364f6b;
-    width: 100%;
-    line-height: 50px;
+	font-weight: 800;
+	font-size: 30px;
+	margin-bottom: 20px;
+	color: #364f6b;
+	width: 100%;
+	line-height: 50px;
 }
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-@media screen and (max-width: 991.98px) {
-    .wrapper {
-        width: 50%;
-    }
-
-    section {
-        display: block;
-    }
-
-    section img {
-        display: block;
-        width: 100%;
-        height: auto;
-    }
-
-
-  
-}
-=======
-
->>>>>>> 4c560584f74702b4408d55aef2b7315596b9a44d
->>>>>>> origin/6182001062
