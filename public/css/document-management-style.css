@@ -3,6 +3,8 @@
 	--card-radius: 30px;
 }
 
+
+
 main {
 	padding: 30px;
 	width: 80vw;
@@ -10,7 +12,7 @@ main {
 	background-color: blanchedalmond;
 	border-radius: 20px;
 	margin: 15px;
-	overflow-y: scroll;
+	overflow-y: scroll;kontol
 	align-items: center;
 }
 
