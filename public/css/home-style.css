@@ -82,18 +82,4 @@ h3 {
 	line-height: 50px;
 }
 
-@media screen and (max-width: 991.98px) {
-	.wrapper {
-		width: 50%;
-	}
 
-	section {
-		display: block;
-	}
-
-	section img {
-		display: block;
-		width: 100%;
-		height: auto;
-	}
-}
