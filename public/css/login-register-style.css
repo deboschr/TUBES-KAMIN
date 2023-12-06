@@ -1,45 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: lightskyblue;
+    background: blanchedalmond;
     background-size: cover;
     background-position: center;
-}
-
-/* header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 100px;
-    background: cornflowerblue;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 99;
-} */
-
-.digitalsignature {
-    font-size: 2em;
-    user-select: none;
 }
 
 .wrapper {
     position: relative;
     width: 400px;
     height: 440px;
-    background: transparent;
+    background: white;
     border: 2px solid rgba(255, 255, 255, .5);
     border-radius: 20px;
     backdrop-filter: blur(50px);
