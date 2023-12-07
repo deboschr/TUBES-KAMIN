@@ -1,14 +1,6 @@
 <main>
 	<h1>Ongoing Document Management</h1>
 	<div class="body">
-		<div class="upload">
-			<input type="file" id="fileInput" style="display: none" />
-			<button
-				onclick="document.getElementById('fileInput').click();"
-				class="button-large dangger">
-				Upload PDF
-			</button>
-		</div>
 		<div class="card-table opacity">
 			<table id="example" class="display compact" style="width: 100%">
 				<form>
@@ -18,7 +10,9 @@
 						<th>Nomor</th>
 						<th>Nama Dokumen</th>
 						<th>Download</th>
-						<th>Status</th>
+						<th>Status Signing</th>
+						<th>Status Verify</th>
+						<th>Verifikasi</th>
 						<th>Hapus</th>
 					</tr>
 					<tr>
@@ -28,8 +22,11 @@
 							<button class="button-download">Download</button>
 						</th>
 						<th class="statusDoc1">SIGNED</th>
+						<th class="statusDoc1">VERIFIED</th>
+						<th><button class="button-verif">Verifikasi</button></th>
 						<th><button class="button-hapus">Hapus</button></th>
 					</tr>
+					
 					<tr>
 						<th class="nomor">2</th>
 						<th>Dokumen2</th>
@@ -37,6 +34,8 @@
 							<button class="button-download">Download</button>
 						</th>
 						<th class="statusDoc1">SIGNED</th>
+						<th class="statusDoc2">UNVERIFIED</th>
+						<th><button class="button-verif">Verifikasi</button></th>
 						<th><button class="button-hapus">Hapus</button></th>
 					</tr>
 					<tr>
@@ -46,6 +45,8 @@
 							<button class="button-download">Download</button>
 						</th>
 						<th class="statusDoc2">UNSIGNED</th>
+						<th class="statusDoc1">VERIFIED</th>
+						<th><button class="button-verif">Verifikasi</button></th>
 						<th><button class="button-hapus">Hapus</button></th>
 					</tr>
 					<tr>
@@ -55,6 +56,8 @@
 							<button class="button-download">Download</button>
 						</th>
 						<th class="statusDoc1">SIGNED</th>
+						<th class="statusDoc1">VERIFIED</th>
+						<th><button class="button-verif">Verifikasi</button></th>
 						<th><button class="button-hapus">Hapus</button></th>
 					</tr>
 				</thead>
