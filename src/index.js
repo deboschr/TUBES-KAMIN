@@ -22,6 +22,7 @@ app.use(
 		saveUninitialized: false,
 	})
 );
+
 app.use("/", routes);
 
 app.listen(5000, () => {
