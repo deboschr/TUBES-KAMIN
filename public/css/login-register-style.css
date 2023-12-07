@@ -11,7 +11,6 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    margin-top: 50px;
     transition: transform .5s ease, height .2s ease;
 }
 

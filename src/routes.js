@@ -1,5 +1,10 @@
 import express from "express";
 
+import {
+	test_sign_page,
+	test_signing,
+	verify_sign,
+} from "./controllers/test-sign-controller.js";
 import { document_management_page } from "./controllers/document-management-controller.js";
 import { document_sign_page } from "./controllers/document-sign-controller.js";
 import { home_page, redirect_page } from "./controllers/home-controller.js";
@@ -20,4 +25,7 @@ router.get("/document-signing", document_sign_page);
 router.post("/register", register_user);
 router.post("/login", login_user);
 
+router.get("/test-sign", test_sign_page);
+router.get("/test-verifikasi", test_signing);
+router.post("/test-sign", verify_sign);
 export default router;
