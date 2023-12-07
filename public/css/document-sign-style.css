@@ -1,0 +1,17 @@
+.container-pdf{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-color: white;
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+iframe{
+    width: 50vw;
+    height: 80vh;
+    border: 10px solid grey;
+    border-radius: 20px;
+}
