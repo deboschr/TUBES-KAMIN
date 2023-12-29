@@ -1,44 +1,33 @@
 <div class="wrapper">
-	<!-- untuk home -->
-	<section id="home">
-		<img src="img/HandWrite.png" />
-		<div class="kolom">
-			<p class="deskripsi"></p>
-			<h2>Make Your Signature</h2>
-			<p>Buat digital signature untuk setiap dokumen anda</p>
-			<!-- masukan link upload dokumen disini-->
-			<p>
-				<a href="document-sign-page.ejs" class="tbl-pink">Upload Dokumen </a>
-			</p>
+	<div class="box-info">
+		<div class="info-head">Welcome to SignifySafe,</div>
+		<div class="info-text">
+			your trusted platform for secure digital signatures. We specialize in
+			providing a seamless and efficient solution for all your document signing
+			needs. Our platform ensures the utmost security and legality, allowing you
+			to sign documents with confidence and ease.
 		</div>
-	</section>
-
-	<!-- untuk courses -->
-	<section id="history">
-		<div class="kolom">
-			<p class="deskripsi"></p>
-			<h2>Document Management</h2>
-			<p>Lihat dokumen yang telah anda upload</p>
-			<!-- masukan link history disini-->
-			<p>
-				<a href="document-management-page.ejs" class="tbl-biru"
-					>Lihat Dokumen</a
-				>
-			</p>
+	</div>
+	<div class="box-upload">
+		<div class="box-text">
+			Easily upload your document below to begin the signing process.
 		</div>
-		<img src="img/ReadBook.png" />
-	</section>
-
-	<section id="AboutUs">
-		<img src="img/IdeaLamp.png" />
-		<div class="kolom">
-			<p class="deskripsi"></p>
-			<h2>About Us</h2>
-			<p>
-				Solusi tanda tangan digital yang inovatif untuk keamanan transaksi
-				bisnis Anda. Kami fokus pada teknologi canggih untuk memberikan solusi
-				yang handal, sederhana, dan aman
-			</p>
-		</div>
-	</section>
+		<form action="/document-upload" method="post" enctype="multipart/form-data">
+			<label class="box-input">
+				<p class="label-text">Browse File</p>
+				<i class="bx bx-cloud-upload"></i>
+				<p class="file-name">No file chosen yet!</p>
+				<input
+					type="file"
+					name="fileUpload"
+					id="file-upload"
+					accept=".pdf, .doc, .docx" />
+			</label>
+			<input
+				type="submit"
+				value="Upload File"
+				name="submit"
+				class="btn-submit" />
+		</form>
+	</div>
 </div>

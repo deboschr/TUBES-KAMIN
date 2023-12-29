@@ -1,41 +1,20 @@
 import crypto from "crypto";
 
-export const key_generate = () => {
+export const createKeyPair = () => {
 	const { publicKey, privateKey } = crypto.generateKeyPairSync("rsa", {
 		modulusLength: 4096,
 		publicKeyEncoding: {
 			type: "spki",
-			format: "pem",
+			format: "der",
 		},
 		privateKeyEncoding: {
 			type: "pkcs8",
-			format: "pem",
-			cipher: "aes-256-cbc",
-			passphrase: "top secret",
+			format: "der",
 		},
 	});
 
-	return { publicKey, privateKey };
-};
-
-export const signing = () => {
-	try {
-		const { publicKey, privateKey } = crypto.generateKeyPairSync("rsa", {
-			modulusLength: 4096,
-			publicKeyEncoding: {
-				type: "spki",
-				format: "pem",
-			},
-			privateKeyEncoding: {
-				type: "pkcs8",
-				format: "pem",
-				cipher: "aes-256-cbc",
-				passphrase: "top secret",
-			},
-		});
-
-		return { publicKey, privateKey };
-	} catch (error) {
-		console.log(error);
-	}
+	return {
+		publicKey: publicKey.toString("base64"),
+		privateKey: privateKey.toString("base64"),
+	};
 };

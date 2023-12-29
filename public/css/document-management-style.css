@@ -1,119 +1,68 @@
-:root {
-	--color-bg: #f7efe7;
-	--card-radius: 30px;
-}
-
-
-@keyframes transitionIn {
-	from {
-	  opacity: 0;
-	  transform: translateY(-10px);
-	}
-	to {
-	  opacity: 1;
-	  transform: translateY(0px);
-	}
-  }
-
-main {
-	padding: 30px;
-	width: 80vw;
-	height: 86vh;
-	background-color: blanchedalmond;
-	border-radius: 20px;
-	margin: 15px;
-	overflow-y: scroll;
+.wrapper {
+	display: flex;
+	width: 100%;
 	align-items: center;
-	animation: transitionIn 0.75s;
-	margin-top: 70px;
-}
-
-
-main > *{
-	padding: 10pt;
-  }
-main h1 {
-	font-size: 22px;
-}
-
-.opacity {
-	opacity: 0.7;
-}
-
-.dangger {
-	background-color: rgb(173, 150, 204);
-}
-.card-table {
-	font-size: 13px !important;
-	padding: 20px;
-	margin-top: 10px;
-	width: 94%;
-	min-height: 60%;
-	background-color: white;
-	border-radius: var(--card-radius);
+	justify-content: center;
+	padding: 0 100px 0;
+	user-select: none;
 }
 
 table {
-	font-size: 13px;
 	width: 100%;
-	border-collapse: separate;
-	table-layout: fixed;
 }
 
-table th {
-	padding: 10px;
+thead tr th:nth-child(1) {
+	text-align: left;
+}
+
+tbody tr td {
+	margin-bottom: 10px;
 	text-align: center;
 }
 
-.atribut {
-	background-color: rgb(173, 150, 204);
-	opacity: 0.7;
-	color: #f7efe7;
-}
-.atribut th:last-child {
-	border-top-right-radius: 10px;
-}
-.atribut th:nth-child(2) {
-	border-top-left-radius: 10px;
-	width: 10%;
-}
-table td {
-	padding: 12px;
-	border-bottom: 1px solid rgba(122, 119, 119, 0.1);
+tbody td:nth-child(1) {
+	text-align: left;
 }
 
-.status-button {
-	color: white;
-	font-size: 0.8em;
-	padding: 8px;
+tbody td:nth-child(4) {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.btn-detail,
+.btn-delete {
+	display: flex;
+	width: 25px;
+	height: 25px;
+	background: rgb(166, 166, 166);
+	margin: 0 5px 0;
+	border-radius: 5px;
 	cursor: pointer;
-	border: none;
-	border-radius: 12px;
 }
-.statusDoc1 {
-	color: green;
-}
-.statusDoc2 {
-	color: red;
-}
-.button-hapus,
-.button-download {
-	border-radius: 10px;
-	padding: 4px;
-	width: 70%;
-	border-radius: 3em;
-	size :100%;
-	
+.btn-detail:hover {
+	background: rgb(63, 132, 236);
 }
 
+.btn-delete:hover {
+	background: rgb(241, 103, 103);
+}
 
-.button-large {
-	margin-top: 10px;
-	color: white;
-	cursor: pointer;
-	border: none;
-	padding: 4px;
-	width: 30%;
-	height: 2em;
-	border-radius: 20px;
+.bx {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.signing-status {
+	display: inline-block;
+	padding: 0 5px 0;
+	border-radius: 5px;
+}
+
+.verify-status {
+	display: inline-block;
+	padding: 0 5px 0;
+	border-radius: 5px;
 }

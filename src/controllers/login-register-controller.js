@@ -1,5 +1,6 @@
 import crypto from "crypto";
-import { user_table } from "../models/user-model.js";
+import { UserModel } from "../models/user-model.js";
+import { createKeyPair } from "../utils/generate-key-util.js";
 
 export const login_page = (req, res) => {
 	res.render("login-register-page", {
@@ -19,12 +20,17 @@ export const login_user = async (req, res) => {
 			.update(password)
 			.digest("base64");
 
-		const existingUser = await user_table.findOne({
+		const existingUser = await UserModel.findOne({
 			where: { email: email, password: hashedPassword },
 		});
 		if (existingUser) {
-			req.session.userData = email;
-			res.redirect("/digital-signature");
+			req.session.loginData = {
+				id_user: existingUser.id_user,
+				name: existingUser.name,
+				public_key: existingUser.public_key,
+				private_key: existingUser.private_key,
+			};
+			res.redirect("/home");
 		} else {
 			res.redirect("/login-register?error=1");
 		}
@@ -35,7 +41,6 @@ export const login_user = async (req, res) => {
 
 export const register_user = async (req, res) => {
 	try {
-		console.log("Masuk");
 		const { nama, email, password, repassword } = req.body;
 
 		if (password != repassword) {
@@ -47,19 +52,33 @@ export const register_user = async (req, res) => {
 			.update(password)
 			.digest("base64");
 
-		const existingUser = await user_table.findOne({ where: { email } });
+		const existingUser = await UserModel.findOne({ where: { email } });
 		if (existingUser) {
 			return res.status(500).send("Email sudah pernah digunakan!");
 		}
 
-		const newUser = await user_table.create({
+		const { publicKey, privateKey } = createKeyPair();
+
+		await UserModel.create({
 			name: nama,
 			email: email,
 			password: hashedPassword,
+			private_key: privateKey,
+			public_key: publicKey,
 		});
 
 		res.redirect("/login-register");
 	} catch (error) {
 		res.status(500).send("Gagal Register");
 	}
+};
+
+export const logout_user = (req, res) => {
+	req.session.destroy((err) => {
+		if (err) {
+			res.status(500).send("Logout failed");
+		} else {
+			res.redirect("/login-register");
+		}
+	});
 };

@@ -1,68 +1,14 @@
-<main>
-	<h1>Ongoing Document Management</h1>
-	<div class="body">
-		<div class="card-table opacity">
-			<table id="example" class="display compact" style="width: 100%">
-				<form>
-				<thead>
-					<tr class="atribut">
-						<th style="display: none"></th>
-						<th>Nomor</th>
-						<th>Nama Dokumen</th>
-						<th>Download</th>
-						<th>Status Signing</th>
-						<th>Status Verify</th>
-						<th>Verifikasi</th>
-						<th>Hapus</th>
-					</tr>
-					<tr>
-						<th class="nomor">1</th>
-						<th>Dokumen1</th>
-						<th class="download">
-							<button class="button-download">Download</button>
-						</th>
-						<th class="statusDoc1">SIGNED</th>
-						<th class="statusDoc1">VERIFIED</th>
-						<th><button class="button-verif">Verifikasi</button></th>
-						<th><button class="button-hapus">Hapus</button></th>
-					</tr>
-					
-					<tr>
-						<th class="nomor">2</th>
-						<th>Dokumen2</th>
-						<th class="download">
-							<button class="button-download">Download</button>
-						</th>
-						<th class="statusDoc1">SIGNED</th>
-						<th class="statusDoc2">UNVERIFIED</th>
-						<th><button class="button-verif">Verifikasi</button></th>
-						<th><button class="button-hapus">Hapus</button></th>
-					</tr>
-					<tr>
-						<th class="nomor">3</th>
-						<th>Dokumen3</th>
-						<th class="download">
-							<button class="button-download">Download</button>
-						</th>
-						<th class="statusDoc2">UNSIGNED</th>
-						<th class="statusDoc1">VERIFIED</th>
-						<th><button class="button-verif">Verifikasi</button></th>
-						<th><button class="button-hapus">Hapus</button></th>
-					</tr>
-					<tr>
-						<th class="nomor">4</th>
-						<th>Dokumen4</th>
-						<th class="download">
-							<button class="button-download">Download</button>
-						</th>
-						<th class="statusDoc1">SIGNED</th>
-						<th class="statusDoc1">VERIFIED</th>
-						<th><button class="button-verif">Verifikasi</button></th>
-						<th><button class="button-hapus">Hapus</button></th>
-					</tr>
-				</thead>
-			</form>
-			</table>
-		</div>
-	</div>
-</main>
+<div class="get-documents-user" data-query="<%= documentsUser %>"></div>
+<div class="wrapper">
+	<table>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Status Signing</th>
+				<th>Status Verification</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+		<tbody id="table-body"></tbody>
+	</table>
+</div>

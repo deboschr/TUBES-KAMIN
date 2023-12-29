@@ -1,24 +1,20 @@
 <nav class="navbar">
 	<div class="container-nav">
-		<h1>Digital Signature</h1>
+		<h1>SignifySafe</h1>
+		<% if (title !== "Login and Register") { %>
 		<ul class="navbar-nav">
 			<li class="nav-item">
 				<a class="nav-link" href="/">Home</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="/document-management">Document Management</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="/document-signing">Document Signing</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="/document-verification">Document Verification</a>
-			</li>
-			<li class="nav-item">
-				<a href="/login-register">
-					<button class="login-popup" type="button">Login</button>
+				<a class="nav-link" href="/document-management">
+					Document Management
 				</a>
 			</li>
+			<li class="nav-item">
+				<button class="btn-logout">Logout</button>
+			</li>
 		</ul>
+		<% } %>
 	</div>
 </nav>

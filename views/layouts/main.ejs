@@ -3,16 +3,24 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+			rel="stylesheet" />
 		<link rel="stylesheet" href="css/<%= style %>" />
-		<link rel="stylesheet" href="css/navbar-style.css" />
+		<link rel="stylesheet" href="css/main-style.css" />
 		<title><%= title %></title>
 	</head>
 	<body>
 		<%- include('navbar') %>
-		<div class="content-page">
-			<%- body %>
-		</div>
+		<div class="content-page"><%- body %></div>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 		<script src="js/<%= script %>"></script>
-		<script src="js/navbar.js"></script>
+		<script src="js/main-script.js"></script>
 	</body>
 </html>

@@ -3,6 +3,7 @@ import { Sequelize } from "sequelize";
 const sequelize = new Sequelize("tubes_kamin", "root", "", {
 	host: "localhost",
 	dialect: "mysql",
+	logging: false,
 });
 
 // Coba koneksi ke database

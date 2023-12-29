@@ -1,79 +1,100 @@
 .wrapper {
-	width: 1100px;
-	margin: auto;
-}
-
-section {
-	margin: auto;
+	width: 100%;
 	display: flex;
-	margin-bottom: 50px;
+	flex-direction: column;
 }
 
-.kolom {
+.box-info {
+	margin-right: auto;
+	padding-left: 100px;
+}
+
+.box-info .info-head {
+	font-size: 20px;
+	font-weight: 600;
+	color: rgb(75, 75, 75);
+}
+.box-info .info-text {
+	width: 700px;
+	font-weight: 600;
+	color: rgb(75, 75, 75);
+}
+
+.box-upload {
+	margin-left: auto;
+	margin-right: 200px;
 	margin-top: 50px;
-	margin-bottom: 50px;
+	width: 550px;
+	color: rgb(75, 75, 75);
 }
 
-.kolom .deskripsi {
-	font-size: 30px;
-	font-weight: bold;
-	color: #364f6b;
+.box-upload .box-text {
+	font-weight: 600;
 }
 
-h2 {
-	font-weight: 800;
-	font-size: 45px;
-	margin-bottom: 20px;
-	color: #000000;
-	width: 100%;
-	line-height: 50px;
+.box-upload form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
-a.tbl-biru {
-	background: #d2e0fb;
-	border-radius: 20px;
-	margin-top: 20px;
-	padding: 15px 20px 15px 20px;
-	color: #ffffff;
+form label {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	display: flex;
+	flex-direction: column;
+	width: 200px;
+	height: 200px;
+	align-items: center;
+	justify-content: center;
+	border-radius: 10px;
+	border: 3px dashed rgb(75, 75, 75);
+	user-select: none;
 	cursor: pointer;
-	font-weight: bold;
 }
 
-a.tbl-biru:hover {
-	background: #ffc5c5;
-	text-decoration: none;
+label i {
+	font-size: 100px;
 }
 
-a.tbl-pink {
-	background: #ffc5c5;
-	border-radius: 20px;
-	margin-top: 20px;
-	padding: 15px 20px 15px 20px;
-	color: #ffffff;
-	cursor: pointer;
-	font-weight: bold;
+label i.active,
+label i:hover {
+	color: rgb(63, 132, 236);
 }
 
-a.tbl-pink:hover {
-	background: #d2e0fb;
-	text-decoration: none;
+label .label-text {
+	font-size: 15px;
 }
 
-p {
-	margin: 10px 0px 10px 0px;
-	padding: 10px 0px 10px 0px;
-}
-
-.tengah {
+.file-name {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	width: 200px;
+	font-size: 13px;
+	padding: 0 10px 0;
 	text-align: center;
-	width: 100%;
 }
 
-h3 {
-	font-weight: 800;
-	font-size: 30px;
-	margin-bottom: 20px;
-	color: #364f6b;
-	width: 100%;
-	line-height: 50px;
+.file-name.active {
+	color: rgb(63, 132, 236);
+}
+
+label input {
+	display: none;
+}
+
+input[type="submit"] {
+	width: 200px;
+	height: 25px;
+	background: rgb(131, 131, 131);
+	border: none;
+	border-radius: 5px;
+	user-select: none;
+	cursor: pointer;
+}
+
+input[type="submit"]:hover {
+	background: rgb(63, 132, 236);
 }
