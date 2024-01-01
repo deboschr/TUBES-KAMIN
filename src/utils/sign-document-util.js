@@ -1,6 +1,5 @@
 import crypto from "crypto";
 import fs from "fs/promises";
-import { PDFDocument } from "pdf-lib";
 
 export const signDocument = async (documentName, privateKeyString) => {
 	try {

@@ -1,0 +1,146 @@
+.wrapper {
+	display: flex;
+
+	width: 100%;
+	height: 85vh;
+	justify-content: center;
+	align-items: center;
+}
+
+/* STYLE FOR INFO */
+.box-info {
+	position: fixed;
+	align-self: first baseline;
+	left: 30px;
+}
+
+.box-info .box-status {
+	height: 100px;
+}
+.box-status .signing-status {
+	display: inline-block;
+	padding: 0 5px 0;
+	border-radius: 5px;
+}
+
+.box-status .verify-status {
+	display: inline-block;
+	padding: 0 5px 0;
+	border-radius: 5px;
+}
+
+/* STYLE FOR SEND */
+.send-wrapper {
+	display: flex;
+	width: 300px;
+	flex-direction: column;
+	position: fixed;
+	align-self: first baseline;
+	margin-left: 100px;
+	right: 40px;
+	color: whitesmoke;
+}
+
+.box-send {
+	border-radius: 5px;
+	max-height: 600px;
+	border: 3px solid #395b64;
+}
+
+.box-title {
+	width: 100%;
+	background: #395b64;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 18px;
+}
+
+.box-reciver {
+	padding: 5px;
+}
+.box-reciver .field {
+	display: flex;
+	align-items: center;
+	height: 30px;
+	background: #395b64;
+	padding: 0 5px 0;
+	margin-bottom: 5px;
+}
+.field .btn-trash {
+	margin-left: auto;
+	user-select: none;
+	cursor: pointer;
+}
+
+.btn-add {
+	display: flex;
+	height: 30px;
+	justify-content: center;
+	align-items: center;
+	background: #395b64;
+	user-select: none;
+	cursor: pointer;
+	margin-bottom: 5px;
+}
+
+.btn-add i {
+	font-size: 20px;
+}
+
+.btn-send {
+	display: flex;
+	height: 30px;
+	justify-content: center;
+	align-items: center;
+	background: #395b64;
+	margin-top: 5px;
+	user-select: none;
+	cursor: pointer;
+	border-radius: 5px;
+}
+.btn-add:hover,
+.btn-send:hover {
+	background: #1978c7;
+}
+
+/* STYLE FOR ACTION */
+
+.box-action {
+	display: flex;
+	position: fixed;
+	right: 40px;
+	align-self: last baseline;
+	margin-left: 100px;
+}
+
+.box-action .btn-sign,
+.box-action .btn-verify {
+	height: 35px;
+	width: 100px;
+	margin: 10px;
+	color: whitesmoke;
+	background: #395b64;
+	font-weight: 600;
+	text-align: center;
+	justify-content: center;
+	line-height: 2;
+	border-radius: 5px;
+	cursor: pointer;
+	user-select: none;
+}
+.box-action .btn-sign:hover,
+.box-action .btn-verify:hover {
+	background: rgb(63, 132, 236);
+}
+
+.doc-container {
+	width: 800px;
+	height: 100%;
+}
+
+.doc-container iframe {
+	width: 100%;
+	height: 100%;
+}

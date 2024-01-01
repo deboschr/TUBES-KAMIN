@@ -1,0 +1,97 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	padding: 0 100px 0;
+	user-select: none;
+}
+
+.box-filter {
+	width: 100%;
+	display: flex;
+	margin-bottom: 30px;
+}
+
+.box-filter .btn-mine,
+.box-filter .btn-receive {
+	display: flex;
+	width: 100px;
+	height: 30px;
+	border: 2px solid #395b64;
+	border-radius: 5px;
+	margin-right: 10px;
+	align-items: center;
+	justify-content: center;
+	font-size: 15px;
+	font-weight: 500;
+	user-select: none;
+	cursor: pointer;
+}
+
+.box-filter .btn-mine.active,
+.box-filter .btn-receive.active {
+	color: whitesmoke;
+	background: #395b64;
+}
+
+table {
+	width: 100%;
+}
+
+thead tr th:nth-child(1) {
+	text-align: left;
+}
+
+tbody tr td {
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+tbody td:nth-child(1) {
+	text-align: left;
+}
+
+tbody td:nth-child(4) {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.btn-detail,
+.btn-delete {
+	display: flex;
+	width: 25px;
+	height: 25px;
+	background: rgb(166, 166, 166);
+	margin: 0 5px 0;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.btn-detail:hover {
+	background: rgb(63, 132, 236);
+}
+
+.btn-delete:hover {
+	background: rgb(241, 103, 103);
+}
+
+.bx {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.signing-status {
+	display: inline-block;
+	padding: 0 5px 0;
+	border-radius: 5px;
+}
+
+.verify-status {
+	display: inline-block;
+	padding: 0 5px 0;
+	border-radius: 5px;
+}

@@ -88,11 +88,13 @@ label input {
 input[type="submit"] {
 	width: 200px;
 	height: 25px;
-	background: rgb(131, 131, 131);
 	border: none;
 	border-radius: 5px;
 	user-select: none;
 	cursor: pointer;
+	color: whitesmoke;
+	background: #395b64;
+	font-weight: 600;
 }
 
 input[type="submit"]:hover {

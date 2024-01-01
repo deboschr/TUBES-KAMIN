@@ -26,11 +26,11 @@ export const UserModel = sequelize.define(
 		},
 		private_key: {
 			type: DataTypes.TEXT,
-			allowNull: false,
+			allowNull: true,
 		},
 		public_key: {
-			type: DataTypes.STRING,
-			allowNull: false,
+			type: DataTypes.TEXT,
+			allowNull: true,
 		},
 	},
 	{

@@ -8,6 +8,10 @@
 			rel="stylesheet" />
 		<link rel="stylesheet" href="css/<%= style %>" />
 		<link rel="stylesheet" href="css/main-style.css" />
+		<% if (typeof layout_style !== "undefined") { %>
+		<link rel="stylesheet" href="css/<%= layout_style %>" />
+		<% } %>
+		<link rel="stylesheet" href="css/search-user-style.css" />
 		<title><%= title %></title>
 	</head>
 	<body>
@@ -21,6 +25,9 @@
 			nomodule
 			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 		<script src="js/<%= script %>"></script>
+		<% if (typeof layout_script !== "undefined") { %>
+		<script src="js/<%= layout_script %>"></script>
+		<% } %>
 		<script src="js/main-script.js"></script>
 	</body>
 </html>

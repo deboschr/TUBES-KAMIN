@@ -1,11 +1,14 @@
 import path from "path";
 import fs from "fs/promises";
 
-export const save_data = async (docFile) => {
+export const save_data = async (docFile, userName) => {
 	try {
+		// Remove spaces from the userName
+		const cleanUserName = userName.replace(/\s/g, ""); // Removes all spaces
+
 		// Generate a new unique name for the doc (.csv/.xlsx)
 		const docExtension = path.extname(docFile.name);
-		const newDocName = `${Date.now()}${docExtension}`;
+		const newDocName = `${cleanUserName}-${Date.now()}${docExtension}`;
 
 		// Construct the absolute path to the 'doc' directory
 		const docDir = path.join("public", "doc");

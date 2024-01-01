@@ -1,6 +1,5 @@
-import { UserDocumentModel } from "../models/user-document-model.js";
+import { DocumentModel } from "../models/document-model.js";
 import { save_data } from "../utils/save-data-util.js";
-import { modifyPDFMetadata } from "../utils/modify-metadata-util.js";
 
 export const home_page = (req, res) => {
 	res.render("home-page", {
@@ -14,19 +13,18 @@ export const home_page = (req, res) => {
 export const document_upload = async (req, res) => {
 	try {
 		if (req.session.loginData) {
-			const { id_user } = req.session.loginData;
+			const { id_user, name, public_key } = req.session.loginData;
 			const docFile = req.files.fileUpload;
-			const resSave = await save_data(docFile);
+			const resSave = await save_data(docFile, name);
 
 			if (resSave.success) {
-				await UserDocumentModel.create({
-					id_user: id_user,
-					document: resSave.newDocName,
+				await DocumentModel.create({
+					owner: id_user,
+					document_name: resSave.newDocName,
+					public_key: public_key,
 				});
 
-				console.log("MASUK MODIFY");
-				await modifyPDFMetadata(resSave.newDocName, "Author", "Jake Spencher");
-				res.redirect("/document-management");
+				res.redirect("/document-management-overview");
 			} else {
 				res.redirect("/home");
 			}
