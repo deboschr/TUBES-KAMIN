@@ -29,6 +29,39 @@
 	border-radius: 5px;
 }
 
+.box-doc-info {
+	display: flex;
+	width: 300px;
+	flex-direction: column;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	border: 3px solid #395b64;
+	padding-bottom: 10px;
+}
+
+.box-name {
+	width: 100%;
+	background: #395b64;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 18px;
+	color: whitesmoke;
+}
+
+.field {
+	display: flex;
+	height: 35px;
+	margin-top: 10px;
+	padding-left: 10px;
+	align-items: center;
+}
+
+.label {
+	width: 60px;
+}
+
 /* STYLE FOR SEND */
 .send-wrapper {
 	display: flex;

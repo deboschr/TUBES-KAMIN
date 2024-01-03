@@ -92,10 +92,18 @@ function setPageValue(fileTarget) {
 	const signingStatus = document.querySelector(".signing-status");
 	const verifyStatus = document.querySelector(".verify-status");
 	const docDisplay = document.querySelector("#doc-display");
+	const ownerName = document.querySelector("#owner-name");
+	const ownerEmail = document.querySelector("#owner-email");
+	const senderName = document.querySelector("#sender-name");
+	const senderEmail = document.querySelector("#sender-email");
 
 	signingStatus.innerHTML = fileTarget.signing_status;
 	verifyStatus.innerHTML = fileTarget.verify_status;
 	docDisplay.src = "doc/" + fileTarget.document_name;
+	ownerName.innerHTML = fileTarget.owner_name;
+	ownerEmail.innerHTML = fileTarget.owner_email;
+	senderName.innerHTML = fileTarget.sender_name;
+	senderEmail.innerHTML = fileTarget.sender_email;
 
 	if (signingStatus.innerHTML === "SIGNED") {
 		signingStatus.style.background = "rgb(0, 238, 159)";

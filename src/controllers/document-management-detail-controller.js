@@ -6,17 +6,35 @@ import { verifySignature } from "../utils/verify-signature-util.js";
 export const document_management_detail_page = async (req, res) => {
 	let fileTarget = null;
 	if (req.session.fileTarget) {
-		const { id_document } = req.session.fileTarget;
-		const queryResult = await DocumentModel.findOne({
+		const { id_document, owner } = req.session.fileTarget;
+		const documentQuery = await DocumentModel.findOne({
 			where: { id_document: id_document },
 		});
 
-		if (queryResult) {
+		let ownerQuery = null;
+		if (owner) {
+			ownerQuery = await UserModel.findOne({
+				where: { id_user: owner },
+			});
+		}
+
+		let senderQuery = null;
+		if (documentQuery && documentQuery.sender) {
+			senderQuery = await UserModel.findOne({
+				where: { id_user: documentQuery.sender },
+			});
+		}
+
+		if (documentQuery) {
 			fileTarget = {
-				id_document: queryResult.id_document,
-				document_name: queryResult.document_name,
-				signing_status: queryResult.signing_status,
-				verify_status: queryResult.verify_status,
+				id_document: documentQuery.id_document,
+				document_name: documentQuery.document_name,
+				signing_status: documentQuery.signing_status,
+				verify_status: documentQuery.verify_status,
+				owner_name: ownerQuery ? ownerQuery.name : "",
+				owner_email: ownerQuery ? ownerQuery.email : "",
+				sender_name: senderQuery ? senderQuery.name : "",
+				sender_email: senderQuery ? senderQuery.email : "",
 			};
 		}
 	}
@@ -26,6 +44,7 @@ export const document_management_detail_page = async (req, res) => {
 	const dataUser = queryUser.map((user) => ({
 		id_user: user.id_user,
 		name: user.name,
+		email: user.email,
 	}));
 
 	res.render("document-management-detail-page", {
@@ -55,16 +74,24 @@ export const document_management_detail = async (req, res) => {
 					req.session.loginData.private_key
 				);
 
+				const { public_key } = req.session.loginData;
+
 				if (resultSign.success) {
 					await DocumentModel.update(
 						{
 							signing_status: "SIGNED",
 							signature: resultSign.signature,
+							public_key: public_key,
 						},
 						{
 							where: { id_document: resultQuery.id_document },
 						}
 					);
+					req.session.fileTarget = {
+						id_document: resultQuery.id_document,
+						document_name: resultQuery.document_name,
+						owner: req.session.loginData.id_user,
+					};
 				} else {
 					await DocumentModel.update(
 						{
@@ -76,7 +103,6 @@ export const document_management_detail = async (req, res) => {
 					);
 				}
 			} else if (action === "verify") {
-				console.log(resultQuery);
 				const resultVerify = await verifySignature(
 					resultQuery.document_name,
 					resultQuery.public_key,
@@ -92,6 +118,16 @@ export const document_management_detail = async (req, res) => {
 							where: { id_document: resultQuery.id_document },
 						}
 					);
+
+					let ownerQuery = await UserModel.findOne({
+						where: { public_key: resultQuery.public_key },
+					});
+
+					req.session.fileTarget = {
+						id_document: resultQuery.id_document,
+						document_name: resultQuery.document_name,
+						owner: ownerQuery ? ownerQuery.id_user : null,
+					};
 				} else {
 					await DocumentModel.update(
 						{
@@ -132,6 +168,5 @@ export const document_management_send = async (req, res) => {
 		res.json({ redirectUrl: "/document-management-detail" });
 	} catch (error) {
 		console.log(error);
-		res.status(500).json({ error: "An error occurred" }); // Handle the error appropriately
 	}
 };

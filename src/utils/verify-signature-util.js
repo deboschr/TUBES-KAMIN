@@ -13,10 +13,8 @@ export const verifySignature = async (
 			type: "spki",
 		});
 
-		// Membaca isi dokumen PDF
 		const document = await fs.readFile(`public/doc/${documentName}`);
 
-		// Menghitung hash dari konten dokumen
 		const documentHash = crypto
 			.createHash("sha256")
 			.update(document)
@@ -26,7 +24,6 @@ export const verifySignature = async (
 		verifier.update(documentHash);
 		verifier.end();
 
-		// Melakukan verifikasi tanda tangan
 		const verified = verifier.verify(publicKey, signature, "base64");
 
 		return { success: true, verifyStatus: verified };

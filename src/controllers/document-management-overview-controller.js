@@ -5,12 +5,10 @@ export const document_management_overview_page = async (req, res) => {
 	let documentsOwner = null;
 	let documentsReceiver = null;
 	if (req.session.loginData) {
-		const { id_user } = req.session.loginData;
+		const { id_user, public_key } = req.session.loginData;
 		documentsOwner = await DocumentModel.findAll({
 			where: {
-				owner: id_user,
-				sender: null,
-				receiver: null,
+				public_key: public_key,
 			},
 		});
 		documentsReceiver = await DocumentModel.findAll({

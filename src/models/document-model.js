@@ -10,10 +10,6 @@ export const DocumentModel = sequelize.define(
 			primaryKey: true,
 			autoIncrement: true,
 		},
-		owner: {
-			type: DataTypes.INTEGER,
-			allowNull: false,
-		},
 		sender: {
 			type: DataTypes.INTEGER,
 			allowNull: true,
@@ -46,17 +42,6 @@ export const DocumentModel = sequelize.define(
 		timestamps: false,
 	}
 );
-
-//##################################
-DocumentModel.belongsTo(UserModel, {
-	foreignKey: "owner",
-	targetKey: "id_user",
-});
-
-UserModel.hasMany(DocumentModel, {
-	foreignKey: "owner",
-	sourceKey: "id_user",
-});
 
 //##################################
 DocumentModel.belongsTo(UserModel, {
