@@ -4,7 +4,7 @@ import fs from "fs/promises";
 export const save_data = async (docFile, userName) => {
 	try {
 		// Remove spaces from the userName
-		const cleanUserName = userName.replace(/\s/g, ""); // Removes all spaces
+		const cleanUserName = userName.replace(/\s/g, "");
 
 		// Generate a new unique name for the doc (.csv/.xlsx)
 		const docExtension = path.extname(docFile.name);

@@ -26,8 +26,6 @@ export const verifySignature = async (
 
 		const verified = verifier.verify(publicKey, signature, "base64");
 
-		console.log(verified);
-
 		return { success: true, verifyStatus: verified };
 	} catch (error) {
 		return { success: false, message: error.message };
